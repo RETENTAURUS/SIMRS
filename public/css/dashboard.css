@@ -1,0 +1,213 @@
+.bi {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Mobile Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar .offcanvas-md {
+        display: block;
+    }
+}
+
+.bg-custom {
+    background-color: #28a745; /* Hijau kalem */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #000000;
+    color: white;
+    height: 100vh;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #66a163;
+    color: white;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.sidebar .nav-item i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/*
+ * Navbar
+ */
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #343a40;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
+    border: none;
+    margin-left: 10px;
+}
+
+.navbar .form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+/* Main Content Styling */
+main {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #66a163;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.card {
+    animation: slideInFromLeft 0.5s ease-out;
+}
+
+/* Badge Styling */
+.badge {
+    font-size: 0.9rem;
+    border-radius: 12px;
+    padding: 0.5rem 0.75rem;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107; /* Kuning untuk status 'diajukan' */
+    color: #000;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545; /* Merah untuk status 'ditolak' */
+    color: #fff;
+}
+
+.badge.bg-success {
+    background-color: #28a745; /* Hijau untuk status 'selesai' */
+    color: #fff;
+}
+
+.badge.bg-orange {
+    background-color: #fd7e14; /* Orange untuk status 'sedang dikerjakan' */
+    color: #fff;
+}
+
+/* Table Styling */
+.table td,
+.table th {
+    vertical-align: middle;
+    text-overflow: ellipsis; /* Menambahkan tanda '...' */
+    overflow: hidden; /* Menyembunyikan teks yang melebihi lebar kolom */
+    white-space: nowrap; /* Mencegah teks agar tidak membungkus ke baris berikutnya */
+    max-width: 200px; /* Atur lebar maksimum kolom */
+    padding: 12px 15px; /* Atur padding untuk sel tabel */
+    font-size: 0.9rem; /* Atur ukuran font */
+}
+
+/* Jika Anda ingin kolom tertentu memiliki lebar yang berbeda */
+.table td:nth-child(2), /* Contoh untuk kolom Judul */
+.table th:nth-child(2) {
+    max-width: 250px; /* Lebar maksimum untuk kolom Judul */
+}
+
+.table td:nth-child(3), /* Contoh untuk kolom Instalasi */
+.table th:nth-child(3) {
+    max-width: 150px; /* Lebar maksimum untuk kolom Instalasi */
+}
+
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-x: auto; /* Memungkinkan scroll horizontal pada tabel */
+}
+
+/* Form Select and Button Styling */
+.form-select {
+    min-width: 140px;
+    padding: 0.3rem 0.6rem; /* Atur padding untuk form select */
+    font-size: 0.9rem; /* Atur ukuran font */
+}
+
+.btn-sm {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem; /* Atur ukuran font */
+}
+
+/* Additional Styling */
+.bg-orange {
+    background-color: #fd7e14;
+}
